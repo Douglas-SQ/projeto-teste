@@ -1,0 +1,10 @@
+import pyautogui
+from time import sleep
+
+# for i in range(5):
+pyautogui.moveTo(1187,207,duration=1)
+pyautogui.dragTo(739,330,button='left',duration=1)
+# pyautogui.press('ENTER')
+sleep(1)
+pyautogui.moveTo(x=973,y=629,duration=1)
+pyautogui.click(973,609,duration=1)
