@@ -47,7 +47,7 @@ pyautogui.click()
 # verificar se já foi curtida
 sleep(4)
 curtida=pyautogui.locateCenterOnScreen('curtida.png')
-naocurtida=pyautogui.locateCenterOnScreen('nãocurtida.png')
+naocurtida=pyautogui.locateCenterOnScreen('naocurtida2.png')
 # senão foi curtido, curtir e comentar
 if naocurtida != None:
     pyautogui.click(naocurtida[0],naocurtida[1],duration=1)
@@ -64,4 +64,5 @@ if naocurtida != None:
 # se já foi curtida não fazer nada
 
 # pausar o bot por 24 horas.
-sleep(86400)
+sleep(1)
+pyautogui.alert(text='encerrado',title='show')
