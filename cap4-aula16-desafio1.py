@@ -42,11 +42,26 @@ elif publi3!=None:
 elif publi4!=None:
     pyautogui.click(publi4[0],publi4[1],duration=1)
 
-
-
-
-
+pyautogui.move(0,40,duration=1)
+pyautogui.click()
 # verificar se já foi curtida
+sleep(4)
+curtida=pyautogui.locateCenterOnScreen('curtida.png')
+naocurtida=pyautogui.locateCenterOnScreen('nãocurtida.png')
 # senão foi curtido, curtir e comentar
+if naocurtida != None:
+    pyautogui.click(naocurtida[0],naocurtida[1],duration=1)
+    comentar=pyautogui.locateCenterOnScreen('comentar.png')
+    pyautogui.click(comentar[0],comentar[1],duration=1)
+    sleep(1)
+    comentario=pyautogui.locateCenterOnScreen('comentario.png')
+    pyautogui.click(comentario[0],comentario[1],duration=1)
+    pyautogui.typewrite('Top!')
+    pyautogui.press('tab')
+    pyautogui.press('enter')
+    pyautogui.press('esc')
+
 # se já foi curtida não fazer nada
+
 # pausar o bot por 24 horas.
+sleep(86400)
